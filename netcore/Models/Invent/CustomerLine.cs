@@ -18,7 +18,7 @@ namespace netcore.Models.Invent
         public string customerLineId { get; set; }
 
         [StringLength(20)]
-        [Display(Name = "Chức danh công việc")]
+        [Display(Name = "Job Title")]
         [Required]
         public string jobTitle { get; set; }
 
@@ -26,21 +26,21 @@ namespace netcore.Models.Invent
         [Display(Name = "Customer Id")]
         public string customerId { get; set; }
 
-        [Display(Name = "Khách hàng")]
+        [Display(Name = "Customer")]
         public Customer customer { get; set; }
 
         //IBasePerson
-        [Display(Name = "Tên")]
+        [Display(Name = "FirstName")]
         [Required]
         [StringLength(20)]
         public string firstName { get; set; }
 
-        [Display(Name = "Họ tên lót")]
+        [Display(Name = "Last Name")]
         [Required]
         [StringLength(20)]
         public string lastName { get; set; }
 
-        [Display(Name = "Bí danh")]
+        [Display(Name = "Middle Name")]
         [StringLength(20)]
         public string middleName { get; set; }
 
@@ -48,7 +48,7 @@ namespace netcore.Models.Invent
         [StringLength(20)]
         public string nickName { get; set; }
 
-        [Display(Name = "Giới tính")]
+        [Display(Name = "Gender")]
         public Gender gender { get; set; }
 
         [Display(Name = "Salutation")]
@@ -56,11 +56,11 @@ namespace netcore.Models.Invent
         //IBasePerson
 
         //IBaseCommunication
-        [Display(Name = "Di động")]
+        [Display(Name = "Mobule Phone")]
         [StringLength(20)]
         public string mobilePhone { get; set; }
 
-        [Display(Name = "Điện thoại cty")]
+        [Display(Name = "Office Phone")]
         [StringLength(20)]
         public string officePhone { get; set; }
 
@@ -68,11 +68,11 @@ namespace netcore.Models.Invent
         [StringLength(20)]
         public string fax { get; set; }
 
-        [Display(Name = "Email cá nhân")]
+        [Display(Name = "Personal Email")]
         [StringLength(50)]
         public string personalEmail { get; set; }
 
-        [Display(Name = "Email công việc")]
+        [Display(Name = "Work EMail")]
         [StringLength(50)]
         public string workEmail { get; set; }
         //IBaseCommunication
