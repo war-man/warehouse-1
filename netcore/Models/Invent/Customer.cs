@@ -18,36 +18,36 @@ namespace netcore.Models.Invent
         public string customerId { get; set; }
 
         [StringLength(50)]
-        [Display(Name = "Tên khách hàng")]
+        [Display(Name = "Customer Name")]
         [Required]
         public string customerName { get; set; }
 
         [StringLength(50)]
-        [Display(Name = "Thông tin khách hàng")]
+        [Display(Name = "Customer information")]
         public string description { get; set; }
 
-        [Display(Name = "Quy mô kinh doanh")]
+        [Display(Name = "Business scale")]
         public BusinessSize size { get; set; }
 
         //IBaseAddress
-        [Display(Name = "Địa chỉ 1")]
+        [Display(Name = "Stree1")]
         [Required]
         [StringLength(50)]
         public string street1 { get; set; }
 
-        [Display(Name = "Địa chỉ 2")]
+        [Display(Name = "Address2")]
         [StringLength(50)]
         public string street2 { get; set; }
 
-        [Display(Name = "Thành phố")]
+        [Display(Name = "City")]
         [StringLength(30)]
         public string city { get; set; }
 
-        [Display(Name = "tỉnh thành")]
+        [Display(Name = "State")]
         [StringLength(30)]
         public string province { get; set; }
 
-        [Display(Name = "Quốc gia")]
+        [Display(Name = "Country")]
         [StringLength(30)]
         public string country { get; set; }
         //IBaseAddress

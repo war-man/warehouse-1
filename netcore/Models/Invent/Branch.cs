@@ -36,19 +36,19 @@ namespace netcore.Models.Invent
         [StringLength(50)]
         public string street1 { get; set; }
 
-        [Display(Name = "Địa chỉ 2")]
+        [Display(Name = "Street2")]
         [StringLength(50)]
         public string street2 { get; set; }
 
-        [Display(Name = "Thành phố")]
+        [Display(Name = "City")]
         [StringLength(30)]
         public string city { get; set; }
 
-        [Display(Name = "Tỉnh thành")]
+        [Display(Name = "State")]
         [StringLength(30)]
         public string province { get; set; }
 
-        [Display(Name = "Quốc gia")]
+        [Display(Name = "Country")]
         [StringLength(30)]
         public string country { get; set; }
         //IBaseAddress

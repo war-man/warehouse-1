@@ -25,53 +25,53 @@ namespace netcore.Models.Invent
 
         [StringLength(20)]
         [Required]
-        [Display(Name = "Số PO")]
+        [Display(Name = "Purchage Order Number")]
         public string purchaseOrderNumber { get; set; }
         
-        [Display(Name = "Điều khoản thanh toán")]
+        [Display(Name = "Terms of payment")]
         public TOP top { get; set; }
 
-        [Display(Name = "Ngày PO")]
+        [Display(Name = "PO Date")]
         public DateTime poDate { get; set; }
 
-        [Display(Name = "Ngày giao hàng")]
+        [Display(Name = "Delivery date")]
         public DateTime deliveryDate { get; set; }
 
         [StringLength(50)]
-        [Display(Name = "Địa chỉ giao hàng")]
+        [Display(Name = "Delivery address")]
         public string deliveryAddress { get; set; }
 
         [StringLength(30)]
-        [Display(Name = "Số chứng từ tham chiếu (Nội bộ)")]
+        [Display(Name = "Number of reference documents (Internal)")]
         public string referenceNumberInternal { get; set; }
 
         [StringLength(30)]
-        [Display(Name = "Số chứng từ tham chiếu (Nhà cung cấp)")]
+        [Display(Name = "Number of reference documents (Supplier)")]
         public string referenceNumberExternal { get; set; }
 
         [StringLength(100)]
-        [Display(Name = "Thông tin mô tả")]
+        [Display(Name = "Description")]
         public string description { get; set; }
 
         [StringLength(38)]
         [Required]
-        [Display(Name = "Đơn vị Công ty Id")]
+        [Display(Name = "Unit Company Id")]
         public string branchId { get; set; }
 
-        [Display(Name = "Đơn vị Công ty")]
+        [Display(Name = "Company unit")]
         public Branch branch { get; set; }
 
         [StringLength(38)]
         [Required]
-        [Display(Name = "Nhà cung cấp Id")]
+        [Display(Name = "Provider Id")]
         public string vendorId { get; set; }
 
-        [Display(Name = "Nhà cung cấp")]
+        [Display(Name = "Supplier")]
         public Vendor vendor { get; set; }
 
         [StringLength(30)]
         [Required]
-        [Display(Name = "Người lập đề nghị nhập hàng (Nội bộ)")]
+        [Display(Name = "The applicant for importing goods(Internal)")]
         public string picInternal { get; set; }
 
         [StringLength(30)]
@@ -79,16 +79,16 @@ namespace netcore.Models.Invent
         [Display(Name = "Người giao hàng (Nhà cung cấp)")]
         public string picVendor { get; set; }
 
-        [Display(Name = "Trạng thái PO")]
+        [Display(Name = "Purchage Order Status")]
         public PurchaseOrderStatus purchaseOrderStatus { get; set; }
 
-        [Display(Name = "Tổng tiền giảm giá")]
+        [Display(Name = "Total Discount")]
         public decimal totalDiscountAmount { get; set; }
 
-        [Display(Name = "Tổng tiền đơn hàng")]
+        [Display(Name = "Total Order Amount")]
         public decimal totalOrderAmount { get; set; }
 
-        [Display(Name = "Số lô hàng nhập")]
+        [Display(Name = "Purchage Recive Number")]
         public string purchaseReceiveNumber { get; set; }
 
         [Display(Name = "Purchase Order Lines")]

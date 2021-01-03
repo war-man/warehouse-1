@@ -30,16 +30,16 @@ namespace netcore.Models.Invent
         [Display(Name = "Product Id")]
         public string productId { get; set; }
 
-        [Display(Name = "Hàng hóa")]
+        [Display(Name = "Product")]
         public Product product { get; set; }
 
-        [Display(Name = "Số lượng")]
+        [Display(Name = "Quantity")]
         public float qty { get; set; }
 
-        [Display(Name = "Giá")]
+        [Display(Name = "Price")]
         public decimal price { get; set; }
 
-        [Display(Name = "Số tiền giảm giá")]
+        [Display(Name = "Discount")]
         public decimal discountAmount { get; set; }
 
         [Display(Name = "Total Amount")]

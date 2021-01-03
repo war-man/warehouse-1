@@ -14,21 +14,21 @@ namespace netcore.Models.Invent
         }
 
         [StringLength(38)]
-        [Display(Name = "Hàng hóa Id")]
+        [Display(Name = "Product Id")]
         public string productId { get; set; }
 
         [StringLength(50)]
-        [Display(Name = "Mã hàng hóa")]
+        [Display(Name = "Product Code")]
         [Required]
         public string productCode { get; set; }
 
         [StringLength(50)]
-        [Display(Name = "Tên hàng hóa")]
+        [Display(Name = "Product Name")]
         [Required]
         public string productName { get; set; }
 
         [StringLength(50)]
-        [Display(Name = "Thông tin hàng hóa")]
+        [Display(Name = "Product Description")]
         public string description { get; set; }
 
         [StringLength(50)]
@@ -40,11 +40,11 @@ namespace netcore.Models.Invent
         public string serialNumber { get; set; }
 
         
-        [Display(Name = "Loại hàng hóa")]
+        [Display(Name = "Product Type")]
         public ProductType productType { get; set; }
 
        
-        [Display(Name = "Đơn vị tính")]
+        [Display(Name = "Unit")]
         public UOM uom { get; set; }
     }
 }
