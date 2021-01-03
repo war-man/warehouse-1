@@ -66,7 +66,7 @@ namespace netcore
             {
                 // Cookie settings
                 options.Cookie.HttpOnly = identityDefaultOptions.CookieHttpOnly;
-                options.Cookie.Expiration = TimeSpan.FromDays(identityDefaultOptions.CookieExpiration);
+             
                 options.LoginPath = identityDefaultOptions.LoginPath; // If the LoginPath is not set here, ASP.NET Core will default to /Account/Login
                 options.LogoutPath = identityDefaultOptions.LogoutPath; // If the LogoutPath is not set here, ASP.NET Core will default to /Account/Logout
                 options.AccessDeniedPath = identityDefaultOptions.AccessDeniedPath; // If the AccessDeniedPath is not set here, ASP.NET Core will default to /Account/AccessDenied
@@ -99,9 +99,9 @@ namespace netcore
         {
             if (env.IsDevelopment())
             {
-                app.UseBrowserLink();
+               
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+               
             }
             else
             {
@@ -109,15 +109,19 @@ namespace netcore
             }
 
             app.UseStaticFiles();
-
+            app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
 
-            app.UseMvc(routes =>
+            app.UseEndpoints((routes) =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapRazorPages();
+                routes.MapControllerRoute(
+                  name: "default",
+                  pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+           
         }
     }
 }
