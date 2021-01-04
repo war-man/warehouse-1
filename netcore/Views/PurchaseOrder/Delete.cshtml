@@ -4,8 +4,7 @@
     ViewData["Title"] = "Delete";
     Layout = "~/Views/Shared/_AdminlteNetcoreDelete.cshtml";
     ViewData["EntityIcon"] = "fa fa-file-text";
-    ViewData["DeleteInfo"] = "
-[Completed] Cannot delete goods import request (PO). [Open] recovery state by deleting relevant import request.";
+    ViewData["DeleteInfo"] = "[Completed] Cannot delete goods import request (PO). [Open] recovery state by deleting relevant import request.";
     ViewData["IsCanDeleted"] = false;
     if (Model.purchaseOrderStatus != netcore.Models.Invent.PurchaseOrderStatus.Completed)
     {
