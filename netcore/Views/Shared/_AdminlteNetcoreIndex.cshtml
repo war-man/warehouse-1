@@ -36,11 +36,11 @@
             <section class="content">
                 <div class="row">
                     <div class="col-md-3">
-                        <a asp-action="Create" class="btn btn-primary btn-block margin-bottom"><i class="@entityIcon"></i> <span>Thêm mới @*@controller*@</span></a>
+                        <a asp-action="Create" class="btn btn-primary btn-block margin-bottom"><i class="@entityIcon"></i> <span>Add new @*@controller*@</span></a>
 
                         <div class="box box-solid">
                             <div class="box-header with-border">
-                                <h3 class="box-title">Nhập hàng hóa</h3>
+                                <h3 class="box-title">Import of goods</h3>
                                 <div class="box-tools">
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse">
                                         <i class="fa fa-minus"></i>
@@ -49,9 +49,9 @@
                             </div>
                             <div class="box-body no-padding">
                                 <ul class="nav nav-pills nav-stacked">
-                                    <li><a href="@Url.Action("Index", "PurchaseOrder")"><i class="fa fa-circle-o text-red"></i> Đề nghị nhập hàng</a></li>
-                                    <li><a href="@Url.Action("Index", "Receiving")"><i class="fa fa-circle-o text-yellow"></i> Giao dịch / nhập hàng</a></li>
-                                    <li><a href="@Url.Action("Index", "TransferOrder")"><i class="fa fa-circle-o text-light-blue"></i> Giao dịch / Điều chuyển kho</a></li>
+                                    <li><a href="@Url.Action("Index", "PurchaseOrder")"><i class="fa fa-circle-o text-red"></i>Recommend to import goods</a></li>
+                                    <li><a href="@Url.Action("Index", "Receiving")"><i class="fa fa-circle-o text-yellow"></i> Transaction / import of goods</a></li>
+                                    <li><a href="@Url.Action("Index", "TransferOrder")"><i class="fa fa-circle-o text-light-blue">Transactions / Transferring warehouse</i> </a></li>
                                 </ul>
                             </div>
                             <!-- /.box-body -->
@@ -68,9 +68,9 @@
                             </div>
                             <div class="box-body no-padding">
                                 <ul class="nav nav-pills nav-stacked">
-                                    <li><a href="@Url.Action("Index", "SalesOrder")"><i class="fa fa-circle-o text-red"></i> Đề ngị xuất hàng</a></li>
-                                    <li><a href="@Url.Action("Index", "Shipment")"><i class="fa fa-circle-o text-yellow"></i> Giao dịch / Xuất hàng</a></li>
-                                    <li><a href="@Url.Action("Index", "TransferOrder")"><i class="fa fa-circle-o text-light-blue"></i> Giao dịch / Điều chuyển kho</a></li>
+                                    <li><a href="@Url.Action("Index", "SalesOrder")"><i class="fa fa-circle-o text-red"></i> Recommended goods</a></li>
+                                    <li><a href="@Url.Action("Index", "Shipment")"><i class="fa fa-circle-o text-yellow"></i> Transaction / Delivery</a></li>
+                                    <li><a href="@Url.Action("Index", "TransferOrder")"><i class="fa fa-circle-o text-light-blue"></i> Transactions / Transferring warehouse</a></li>
                                 </ul>
                             </div>
                             <!-- /.box-body -->

@@ -75,8 +75,8 @@
             <!-- /.box-body -->
             <div class="box-footer">
                 <div class="form-group">
-                    <a asp-action="Edit" asp-route-id="@Model.vendorId" class="btn btn-primary">Sửa</a>
-                    <a asp-action="Index" class="btn btn-default">Quay về...</a>
+                    <a asp-action="Edit" asp-route-id="@Model.vendorId" class="btn btn-primary">Save</a>
+                    <a asp-action="Index" class="btn btn-default">Back</a>
                 </div>
             </div>
             <!-- /.box-footer-->
@@ -114,7 +114,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-success" style="margin-bottom:10px" onclick="ShowPopup('@Url.Action("Create","VendorLine", new { masterid = Model.vendorId })')"><i class="fa fa-plus"></i> Thêm liên hệ</a>
+                            <a class="btn btn-success" style="margin-bottom:10px" onclick="ShowPopup('@Url.Action("Create","VendorLine", new { masterid = Model.vendorId })')"><i class="fa fa-plus"></i> Add a contact</a>
                         </div>
                     </div>
                 </div>

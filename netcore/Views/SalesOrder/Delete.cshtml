@@ -4,7 +4,7 @@
     ViewData["Title"] = "Delete";
     Layout = "~/Views/Shared/_AdminlteNetcoreDelete.cshtml";
     ViewData["EntityIcon"] = "fa fa-cart-plus";
-    ViewData["DeleteInfo"] = " [Completed] Không thể xóa Đề nghị xuất hàng (SO). Trạng thái khôi phục về [Open] bằng cách xóa Đề nghị xuất hàng (Lô hàng) có liên quan.";
+    ViewData["DeleteInfo"] = "[Completed] Unable to delete Suggested row(SO).Restore state to[Open] by deleting the relevant Offer(Shipment).";
     ViewData["IsCanDeleted"] = false;
     if (Model.salesOrderStatus != netcore.Models.Invent.SalesOrderStatus.Completed)
     {

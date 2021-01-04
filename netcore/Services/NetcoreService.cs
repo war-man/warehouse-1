@@ -207,6 +207,43 @@ namespace netcore.Services
                 throw;
             }
         }
+        public async Task CreateDefaultSales()
+        {
+            try
+            {
+                ApplicationUser superAdmin = new ApplicationUser();
+                superAdmin.Email = "sales@demo.com";
+                superAdmin.UserName = superAdmin.Email;
+                superAdmin.EmailConfirmed = true;
+                superAdmin.isSuperAdmin =false;
+                superAdmin.SalesOrderRole = true;
+
+                Type t = superAdmin.GetType();
+                foreach (System.Reflection.PropertyInfo item in t.GetProperties())
+                {
+                    if (item.Name.Contains("Role"))
+                    {
+                        item.SetValue(superAdmin, true);
+                    }
+                }
+
+                await _userManager.CreateAsync(superAdmin, _superAdminDefaultOptions.Password);
+
+                //loop all the roles and then fill to SuperAdmin so he become powerfull
+                foreach (var item in typeof(netcore.MVC.Pages).GetNestedTypes())
+                {
+                    var roleName = item.Name;
+                    if (!await _roleManager.RoleExistsAsync(roleName)) { await _roleManager.CreateAsync(new IdentityRole(roleName)); }
+
+                    await _userManager.AddToRoleAsync(superAdmin, roleName);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
         public VMStock GetStockByProductAndWarehouse(string productId, string warehouseId)
         {
