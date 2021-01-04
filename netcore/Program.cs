@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using netcore.Data;
@@ -20,7 +21,7 @@ namespace netcore
     {
         public static void Main(string[] args)
         {
-            var host = BuildWebHost(args);
+            var host = CreateHostBuilder(args).Build();
 
             using (var scope = host.Services.CreateScope())
             {
@@ -43,22 +44,19 @@ namespace netcore
             host.Run();
         }
 
-        //log level severity: Trace = 0, Debug = 1, Information = 2, Warning = 3, Error = 4, Critical = 5
+       
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+          Host.CreateDefaultBuilder(args)
+              .ConfigureWebHostDefaults(webBuilder =>
+              {
+                  webBuilder.UseStartup<Startup>();
+              }).ConfigureLogging((hostingContext, logging) =>
+              {
+                  logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                  logging.AddConsole();
+                  logging.AddDebug();
+              });
 
-        //AzureAppService log activated by default if application hosted on Azure
-        //https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-2.1&tabs=aspnetcore2x#appservice
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                 .ConfigureLogging((hostingContext, logging) =>
-                 {
-                     logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
-                     logging.AddConsole();
-                     logging.AddDebug();
-                 })
-                .UseStartup<Startup>()
-                .Build();
-
-        
     }
 }
