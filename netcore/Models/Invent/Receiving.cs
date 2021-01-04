@@ -21,50 +21,50 @@ namespace netcore.Models.Invent
 
         [StringLength(38)]
         [Required]
-        [Display(Name = "Phiếu đề nghị nhập hàng (Id)")]
+        [Display(Name = "Purchase Order (Id)")]
         public string purchaseOrderId { get; set; }
 
-        [Display(Name = "Phiếu đề nghị nhập (PO)")]
+        [Display(Name = "Application form (PO)")]
         public PurchaseOrder purchaseOrder { get; set; }
 
         [StringLength(20)]
         [Required]
-        [Display(Name = "Số phiếu nhập hàng")]
+        [Display(Name = "Number of goods import slip")]
         public string receivingNumber { get; set; }
         
         [Required]
-        [Display(Name = "Ngày nhập hàng")]
+        [Display(Name = "Import date")]
         public DateTime receivingDate { get; set; }
 
         [StringLength(38)]
         [Display(Name = "vendorId")]
         public string vendorId { get; set; }
 
-        [Display(Name = "Nhà cung cấp")]
+        [Display(Name = "Supplier")]
         public Vendor vendor { get; set; }
 
         [StringLength(50)]
         [Required]
-        [Display(Name = "Số yêu cầu giao hàng(DO)")]
+        [Display(Name = "Order number (DO)")]
         public string vendorDO { get; set; }
 
         [StringLength(50)]
-        [Display(Name = "Số hóa đơn giao hàng")]
+        [Display(Name = "Delivery invoice number")]
         public string vendorInvoice { get; set; }
 
         [StringLength(38)]
         [Display(Name = "Branch Id")]
         public string branchId { get; set; }
 
-        [Display(Name = "Đơn vị công ty")]
+        [Display(Name = "Company unit")]
         public Branch branch { get; set; }
 
         [StringLength(38)]
         [Required]
-        [Display(Name = "Kho hàng Id")]
+        [Display(Name = "Warehouse Id")]
         public string warehouseId { get; set; }
 
-        [Display(Name = "Kho hàng")]
+        [Display(Name = "Warehouse")]
         public Warehouse warehouse { get; set; }
 
         [Display(Name = "Receiving Lines")]

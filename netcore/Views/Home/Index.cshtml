@@ -40,13 +40,13 @@
                 <div class="small-box bg-aqua">
                     <div class="inner">
                         <h3>@po</h3>
-                        <p>Đề nghị nhập hàng(PO)</p>
+                        <p>Offer to import goods (PO)</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-file-text"></i>
                     </div>
                     <a href="@Url.Action("Index", "PurchaseOrder")" class="small-box-footer">
-                        Xem chi tiết <i class="fa fa-arrow-circle-right"></i>
+                        See details <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -56,13 +56,13 @@
                 <div class="small-box bg-green">
                     <div class="inner">
                         <h3>@so<sup style="font-size: 20px"></sup></h3>
-                        <p>Đề nghị xuất hàng(SO)</p>
+                        <p>Recommended goods (SO)</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-cart-plus"></i>
                     </div>
                     <a href="@Url.Action("Index", "SalesOrder")" class="small-box-footer">
-                        Xem chi tiết <i class="fa fa-arrow-circle-right"></i>
+                      See details <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -72,13 +72,13 @@
                 <div class="small-box bg-yellow">
                     <div class="inner">
                         <h3>@receive</h3>
-                        <p>Đơn nhập hàng(GSRN)</p>
+                        <p>Purchase Order (GSRN)</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-truck"></i>
                     </div>
                     <a href="@Url.Action("Index", "Receiving")" class="small-box-footer">
-                        Xem chi tiết <i class="fa fa-arrow-circle-right"></i>
+                       See details <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -88,13 +88,13 @@
                 <div class="small-box bg-red">
                     <div class="inner">
                         <h3>@shipment</h3>
-                        <p>Đơn xuất hàng(DO)</p>
+                        <p>Orders (DO)</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-plane"></i>
                     </div>
                     <a href="@Url.Action("Index", "Shipment")" class="small-box-footer">
-                        Xem chi tiết <i class="fa fa-arrow-circle-right"></i>
+                        See details <i class="fa fa-arrow-circle-right"></i>
                     </a>
                 </div>
             </div>
@@ -105,7 +105,7 @@
             <div class="col-lg-6">
                 <div class="box box-danger">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Loại hàng hóa</h3>
+                        <h3 class="box-title">Commodities</h3>
                         <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse">
                                 <i class="fa fa-minus"></i>
@@ -122,8 +122,7 @@
             <div class="col-lg-6">
                 <div class="box box-success">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Lệnh Nhập-Xuất (trong 6 tháng)</h3>
-                        <div class="box-tools pull-right">
+                        <h3 class="box-title">Import-Export Order (in 6 months)                <div class="box-tools pull-right">
                             <button type="button" class="btn btn-box-tool" data-widget="collapse">
                                 <i class="fa fa-minus"></i>
                             </button>
@@ -144,7 +143,7 @@
             <div class="col-lg-12">
                 <div class="box box-warning">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Tồn kho (Realtime)</h3>
+                        <h3 class="box-title">Inventory (Realtime)</h3>
                         <div class="box-tools pull-right">
                             <div class="has-feedback">
                                 <input type="text" id="mainSearch" class="form-control input-sm" placeholder="Search...">
@@ -158,12 +157,12 @@
                             <table class="table table-hover table-striped" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th><i class="fa fa-tags"></i> Hàng hóa</th>
-                                        <th><i class="fa fa-file-text"></i> Đề nghị nhập hàng</th>
-                                        <th><i class="fa fa-truck"></i> Nhập hàng</th>
-                                        <th><i class="fa fa-cart-plus"></i> Đề nghị xuất hàng</th>
-                                        <th><i class="fa fa-plane"></i> Xuất hàng </th>
-                                        <th class="text-aqua"><i class="fa fa-check-circle"></i> Tồn thực tế</th>
+                                        <th><i class="fa fa-tags"></i> Goods</th>
+                                        <th><i class="fa fa-file-text"></i>Recommend to import goods</th>
+                                        <th><i class="fa fa-truck"></i> Import of goods</th>
+                                        <th><i class="fa fa-cart-plus"></i> Recommended goods</th>
+                                        <th><i class="fa fa-plane"></i> Release </th>
+                                        <th class="text-aqua"><i class="fa fa-check-circle"></i> Realistic existence</th>
                                     </tr>
                                 </thead>
                                 <tbody>

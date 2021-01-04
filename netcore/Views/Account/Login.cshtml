@@ -16,7 +16,7 @@
         <div class="login-logo bg-primary">
             <i class="fa fa-cubes"></i><a href="@netcore.MVC.Pages.HomeIndex.Url" style="color:white"><b>IN</b>VENTORY WAREHOUSE</a>
         </div>
-        <p class="login-box-msg">Bạn cần đăng nhập tài khoản của mình!</p>
+        <p class="login-box-msg">You need to login to your account!</p>
         <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
             <div class="form-group has-feedback">
                 <label asp-for="Email"></label>
@@ -40,7 +40,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Đăng nhập</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Log in</button>
                 </div>
                 <!-- /.col -->
             </div>
@@ -56,8 +56,8 @@
                 </a>
             </div>
             <!-- /.social-auth-links -->
-            <a asp-action="ForgotPassword">Quên mật khẩu đăng nhập.</a><br>
-            <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" class="text-center">Đăng ký thành viên mới.</a>
+            <a asp-action="ForgotPassword">Forgot login password.</a><br>
+            <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" class="text-center">New member registration.</a>
             <p class="pull-right">
                 <span style="font-style:italic;"><small>Copyright &copy; 2019</small></span>
             </p>
